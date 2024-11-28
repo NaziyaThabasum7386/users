@@ -29,7 +29,7 @@ const UserTable = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get("https://jsonplaceholder.typicode.com/user");
+        const response = await axios.get("https://jsonplaceholder.typicode.com/users");
         const userData = response.data.map((user) => {
           const [firstName, ...lastName] = user.name.split(" ");
           return {
